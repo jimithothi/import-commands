@@ -570,7 +570,7 @@ export default function Home() {
 
   return (
     <div className={`min-h-screen p-4 ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div 
           className={`fixed top-4 right-4 rounded-full p-2 cursor-pointer z-50 ${
             theme === 'dark' 
