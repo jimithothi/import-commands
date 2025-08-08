@@ -37,7 +37,7 @@ export default function Home() {
               <span className="text-gray-400 text-xs">// Start application with PM2</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-gray-">pm2 start app.js --name "my-app"</span>
+              <span className="text-gray-300">pm2 start app.js --name "my-app"</span>
               <span className="text-gray-400 text-xs">// Start with custom name</span>
             </div>
             <div className="flex items-center gap-3">
