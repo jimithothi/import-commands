@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --terminal-green: #00ff00;
+  --terminal-yellow: #ffff00;
+  --terminal-blue: #0080ff;
+  --terminal-gray: #333333;
+  --terminal-light-gray: #666666;
+  --card-bg: #1a1a1a;
+  --border-color: #333333;
+  --accent-color: #00ff00;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #888888;
+}
+
+[data-theme="light"] {
+  --background: #f8f9fa;
+  --foreground: #1a1a1a;
+  --terminal-green: #059669;
+  --terminal-yellow: #d97706;
+  --terminal-blue: #2563eb;
+  --terminal-gray: #6b7280;
+  --terminal-light-gray: #9ca3af;
+  --card-bg: #ffffff;
+  --border-color: #e5e7eb;
+  --accent-color: #059669;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark theme styles */
+[data-theme="dark"] .bg-black {
+  background-color: #000000;
+}
+
+[data-theme="dark"] .bg-gray-800 {
+  background-color: #1f2937;
+}
+
+[data-theme="dark"] .bg-gray-900 {
+  background-color: #111827;
+}
+
+[data-theme="dark"] .border-gray-700 {
+  border-color: #374151;
+}
+
+[data-theme="dark"] .border-gray-600 {
+  border-color: #4b5563;
+}
+
+[data-theme="dark"] .text-white {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .text-gray-400 {
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .text-green-400 {
+  color: #4ade80;
+}
+
+[data-theme="dark"] .text-blue-400 {
+  color: #60a5fa;
+}
+
+[data-theme="dark"] .text-orange-400 {
+  color: #fb923c;
+}
+
+[data-theme="dark"] .text-gray-300 {
+  color: #fdfdfd;
+}
+
+/* Light theme styles */
+[data-theme="light"] .bg-black {
+  background-color: #ffffff;
+}
+
+[data-theme="light"] .bg-gray-800 {
+  background-color: #f3f4f6;
+}
+
+[data-theme="light"] .bg-gray-900 {
+  background-color: #fafbfb;
+}
+
+[data-theme="light"] .border-gray-700 {
+  border-color: #d1d5db;
+}
+
+[data-theme="light"] .border-gray-600 {
+  border-color: #e5e7eb;
+}
+
+[data-theme="light"] .text-white {
+  color: #1f2937;
+}
+
+[data-theme="light"] .text-gray-400 {
+  color: #6b7280;
+}
+
+[data-theme="light"] .text-green-400 {
+  color: #059669;
+}
+
+[data-theme="light"] .text-blue-400 {
+  color: #2563eb;
+}
+
+[data-theme="light"] .text-orange-400 {
+  color: #ea580c;
+}
+
+[data-theme="light"] .text-gray-300 {
+  color: #272c31;
 }
