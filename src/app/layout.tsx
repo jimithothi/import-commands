@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Developer Terminal Commands",
+  title: "Developer Terminal Commands - Production",
   description: "Developer Terminal Commands",
   icons: {
     icon: [
