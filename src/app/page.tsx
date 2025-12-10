@@ -565,6 +565,549 @@ export default function Home() {
           </div>
         </div>
       )
+    },
+    {
+      title: "MySQL Server Setup & Management",
+      content: (
+        <div className="bg-black text-white p-4 font-mono text-sm">
+          <div className="text-white mb-2">$ sudo apt install mysql-server</div>
+          <div className="text-blue-400 mb-2">## MySQL Installation & Configuration</div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># Installation (Ubuntu/Debian)</div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo apt update</span>
+              <span className="text-gray-400 text-xs">## Update package list</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo apt install mysql-server</span>
+              <span className="text-gray-400 text-xs">## Install MySQL server</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo mysql_secure_installation</span>
+              <span className="text-gray-400 text-xs">## Run security setup script</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl start mysql</span>
+              <span className="text-gray-400 text-xs">## Start MySQL service</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl enable mysql</span>
+              <span className="text-gray-400 text-xs">## Enable MySQL on boot</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl status mysql</span>
+              <span className="text-gray-400 text-xs">## Check MySQL status</span>
+            </div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># Installation (CentOS/RHEL)</div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo yum install mysql-server</span>
+              <span className="text-gray-400 text-xs">## Install MySQL on CentOS/RHEL</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl start mysqld</span>
+              <span className="text-gray-400 text-xs">## Start MySQL service</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl enable mysqld</span>
+              <span className="text-gray-400 text-xs">## Enable MySQL on boot</span>
+            </div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># Initial Setup & Configuration</div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo mysql -u root -p</span>
+              <span className="text-gray-400 text-xs">## Login as root user</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password';</span>
+              <span className="text-gray-400 text-xs">## Set root password</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">FLUSH PRIVILEGES;</span>
+              <span className="text-gray-400 text-xs">## Reload privileges</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">CREATE DATABASE my_database;</span>
+              <span className="text-gray-400 text-xs">## Create new database</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';</span>
+              <span className="text-gray-400 text-xs">## Create new user</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">GRANT ALL PRIVILEGES ON my_database.* TO 'username'@'localhost';</span>
+              <span className="text-gray-400 text-xs">## Grant privileges to user</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">FLUSH PRIVILEGES;</span>
+              <span className="text-gray-400 text-xs">## Apply changes</span>
+            </div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># Service Management</div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl start mysql</span>
+              <span className="text-gray-400 text-xs">## Start MySQL service</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl stop mysql</span>
+              <span className="text-gray-400 text-xs">## Stop MySQL service</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl restart mysql</span>
+              <span className="text-gray-400 text-xs">## Restart MySQL service</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl status mysql</span>
+              <span className="text-gray-400 text-xs">## Check service status</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl enable mysql</span>
+              <span className="text-gray-400 text-xs">## Enable auto-start on boot</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl disable mysql</span>
+              <span className="text-gray-400 text-xs">## Disable auto-start on boot</span>
+            </div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># Database Management</div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">mysql -u username -p</span>
+              <span className="text-gray-400 text-xs">## Connect to MySQL</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">SHOW DATABASES;</span>
+              <span className="text-gray-400 text-xs">## List all databases</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">USE database_name;</span>
+              <span className="text-gray-400 text-xs">## Select database</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">SHOW TABLES;</span>
+              <span className="text-gray-400 text-xs">## List tables in database</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">CREATE DATABASE db_name CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;</span>
+              <span className="text-gray-400 text-xs">## Create database with UTF-8</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">DROP DATABASE db_name;</span>
+              <span className="text-gray-400 text-xs">## Delete database</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">SELECT USER(), CURRENT_USER();</span>
+              <span className="text-gray-400 text-xs">## Show current user</span>
+            </div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># User Management</div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';</span>
+              <span className="text-gray-400 text-xs">## Create new user</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">CREATE USER 'newuser'@'%' IDENTIFIED BY 'password';</span>
+              <span className="text-gray-400 text-xs">## Create user with remote access</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost';</span>
+              <span className="text-gray-400 text-xs">## Grant all privileges</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">GRANT SELECT, INSERT, UPDATE ON db.* TO 'user'@'localhost';</span>
+              <span className="text-gray-400 text-xs">## Grant specific privileges</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">REVOKE ALL PRIVILEGES ON *.* FROM 'user'@'localhost';</span>
+              <span className="text-gray-400 text-xs">## Revoke privileges</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">DROP USER 'user'@'localhost';</span>
+              <span className="text-gray-400 text-xs">## Delete user</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">SHOW GRANTS FOR 'user'@'localhost';</span>
+              <span className="text-gray-400 text-xs">## Show user privileges</span>
+            </div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># Create User for Specific Database</div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">CREATE DATABASE my_app_db;</span>
+              <span className="text-gray-400 text-xs">## Create the database first</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">CREATE USER 'app_user'@'localhost' IDENTIFIED BY 'secure_password';</span>
+              <span className="text-gray-400 text-xs">## Create user for specific database</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">GRANT ALL PRIVILEGES ON my_app_db.* TO 'app_user'@'localhost';</span>
+              <span className="text-gray-400 text-xs">## Grant all privileges on specific database</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">FLUSH PRIVILEGES;</span>
+              <span className="text-gray-400 text-xs">## Apply privilege changes</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300"># Grant specific privileges only (read/write)</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">GRANT SELECT, INSERT, UPDATE, DELETE ON my_app_db.* TO 'app_user'@'localhost';</span>
+              <span className="text-gray-400 text-xs">## Grant read/write privileges only</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300"># Grant read-only access</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">GRANT SELECT ON my_app_db.* TO 'readonly_user'@'localhost';</span>
+              <span className="text-gray-400 text-xs">## Grant read-only access to database</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300"># Create user with remote access for specific database</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">CREATE USER 'app_user'@'%' IDENTIFIED BY 'secure_password';</span>
+              <span className="text-gray-400 text-xs">## User can connect from any host</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">GRANT ALL PRIVILEGES ON my_app_db.* TO 'app_user'@'%';</span>
+              <span className="text-gray-400 text-xs">## Grant privileges for remote access</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300"># Verify user can only access specific database</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">SHOW GRANTS FOR 'app_user'@'localhost';</span>
+              <span className="text-gray-400 text-xs">## Check user privileges</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300"># Test connection with specific database user</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">mysql -u app_user -p my_app_db</span>
+              <span className="text-gray-400 text-xs">## Connect using database-specific user</span>
+            </div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># Backup & Restore</div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">mysqldump -u username -p database_name {'>'} backup.sql</span>
+              <span className="text-gray-400 text-xs">## Backup single database</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">mysqldump -u username -p --all-databases {'>'} all_databases.sql</span>
+              <span className="text-gray-400 text-xs">## Backup all databases</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">mysql -u username -p database_name {'<'} backup.sql</span>
+              <span className="text-gray-400 text-xs">## Restore database from backup</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">mysqldump -u username -p --single-transaction database_name {'>'} backup.sql</span>
+              <span className="text-gray-400 text-xs">## Backup without locking tables</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">mysql -u username -p -e "SELECT * FROM table_name" database_name</span>
+              <span className="text-gray-400 text-xs">## Execute query from command line</span>
+            </div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># Configuration Files</div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf</span>
+              <span className="text-gray-400 text-xs">## Edit MySQL configuration (Ubuntu/Debian)</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo nano /etc/my.cnf</span>
+              <span className="text-gray-400 text-xs">## Edit MySQL configuration (CentOS/RHEL)</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300"># bind-address = 127.0.0.1</span>
+              <span className="text-gray-400 text-xs">## Comment to allow remote connections</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl restart mysql</span>
+              <span className="text-gray-400 text-xs">## Restart after config changes</span>
+            </div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 text-green-400">
+            <div>{'>'} MySQL server installed successfully ✓</div>
+            <div>{'>'} Database and users configured ✓</div>
+            <div>{'>'} Service running and enabled ✓</div>
+            <div>{'>'} Ready for database operations! 🗄️</div>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Nginx Web Server Setup & Configuration",
+      content: (
+        <div className="bg-black text-white p-4 font-mono text-sm">
+          <div className="text-white mb-2">$ sudo apt install nginx</div>
+          <div className="text-blue-400 mb-2">## Nginx Installation & Configuration</div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># Installation (Ubuntu/Debian)</div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo apt update</span>
+              <span className="text-gray-400 text-xs">## Update package list</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo apt install nginx</span>
+              <span className="text-gray-400 text-xs">## Install Nginx web server</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl start nginx</span>
+              <span className="text-gray-400 text-xs">## Start Nginx service</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl enable nginx</span>
+              <span className="text-gray-400 text-xs">## Enable Nginx on boot</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl status nginx</span>
+              <span className="text-gray-400 text-xs">## Check Nginx status</span>
+            </div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># Installation (CentOS/RHEL)</div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo yum install nginx</span>
+              <span className="text-gray-400 text-xs">## Install Nginx on CentOS/RHEL</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl start nginx</span>
+              <span className="text-gray-400 text-xs">## Start Nginx service</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl enable nginx</span>
+              <span className="text-gray-400 text-xs">## Enable Nginx on boot</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo firewall-cmd --permanent --add-service=http</span>
+              <span className="text-gray-400 text-xs">## Allow HTTP traffic</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo firewall-cmd --permanent --add-service=https</span>
+              <span className="text-gray-400 text-xs">## Allow HTTPS traffic</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo firewall-cmd --reload</span>
+              <span className="text-gray-400 text-xs">## Reload firewall rules</span>
+            </div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># Service Management</div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl start nginx</span>
+              <span className="text-gray-400 text-xs">## Start Nginx service</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl stop nginx</span>
+              <span className="text-gray-400 text-xs">## Stop Nginx service</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl restart nginx</span>
+              <span className="text-gray-400 text-xs">## Restart Nginx service</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl reload nginx</span>
+              <span className="text-gray-400 text-xs">## Reload configuration without downtime</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl status nginx</span>
+              <span className="text-gray-400 text-xs">## Check service status</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo nginx -t</span>
+              <span className="text-gray-400 text-xs">## Test configuration file syntax</span>
+            </div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># Configuration File Locations</div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo nano /etc/nginx/nginx.conf</span>
+              <span className="text-gray-400 text-xs">## Main Nginx configuration file</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo nano /etc/nginx/sites-available/default</span>
+              <span className="text-gray-400 text-xs">## Default site configuration</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo nano /etc/nginx/sites-available/your-site</span>
+              <span className="text-gray-400 text-xs">## Create new site configuration</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">ls -la /etc/nginx/sites-available/</span>
+              <span className="text-gray-400 text-xs">## List available site configurations</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">ls -la /etc/nginx/sites-enabled/</span>
+              <span className="text-gray-400 text-xs">## List enabled site configurations</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo ln -s /etc/nginx/sites-available/your-site /etc/nginx/sites-enabled/</span>
+              <span className="text-gray-400 text-xs">## Enable site configuration</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo rm /etc/nginx/sites-enabled/your-site</span>
+              <span className="text-gray-400 text-xs">## Disable site configuration</span>
+            </div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># Basic Site Configuration</div>
+            <div className="text-gray-300"># /etc/nginx/sites-available/your-site</div>
+            <div className="text-gray-300">server {'{'}</div>
+            <div className="text-gray-300 ml-4">listen 80;</div>
+            <div className="text-gray-300 ml-4">server_name yourdomain.com www.yourdomain.com;</div>
+            <div className="text-gray-300 ml-4">root /var/www/your-site;</div>
+            <div className="text-gray-300 ml-4">index index.html index.htm index.nginx-debian.html;</div>
+            <div className="text-gray-300 ml-4">location / {'{'}</div>
+            <div className="text-gray-300 ml-8">try_files $uri $uri/ =404;</div>
+            <div className="text-gray-300 ml-4">{'}'}</div>
+            <div className="text-gray-300">{'}'}</div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># Reverse Proxy Configuration</div>
+            <div className="text-gray-300"># Proxy to Node.js/Express app</div>
+            <div className="text-gray-300">server {'{'}</div>
+            <div className="text-gray-300 ml-4">listen 80;</div>
+            <div className="text-gray-300 ml-4">server_name yourdomain.com;</div>
+            <div className="text-gray-300 ml-4">location / {'{'}</div>
+            <div className="text-gray-300 ml-8">proxy_pass http://localhost:3000;</div>
+            <div className="text-gray-300 ml-8">proxy_http_version 1.1;</div>
+            <div className="text-gray-300 ml-8">proxy_set_header Upgrade $http_upgrade;</div>
+            <div className="text-gray-300 ml-8">proxy_set_header Connection 'upgrade';</div>
+            <div className="text-gray-300 ml-8">proxy_set_header Host $host;</div>
+            <div className="text-gray-300 ml-8">proxy_cache_bypass $http_upgrade;</div>
+            <div className="text-gray-300 ml-4">{'}'}</div>
+            <div className="text-gray-300">{'}'}</div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># PHP-FPM Configuration</div>
+            <div className="text-gray-300"># For PHP applications</div>
+            <div className="text-gray-300">server {'{'}</div>
+            <div className="text-gray-300 ml-4">listen 80;</div>
+            <div className="text-gray-300 ml-4">server_name yourdomain.com;</div>
+            <div className="text-gray-300 ml-4">root /var/www/your-site;</div>
+            <div className="text-gray-300 ml-4">index index.php index.html;</div>
+            <div className="text-gray-300 ml-4">location ~ \.php$ {'{'}</div>
+            <div className="text-gray-300 ml-8">include snippets/fastcgi-php.conf;</div>
+            <div className="text-gray-300 ml-8">fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;</div>
+            <div className="text-gray-300 ml-4">{'}'}</div>
+            <div className="text-gray-300">{'}'}</div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># SSL/HTTPS Setup with Let's Encrypt</div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo apt install certbot python3-certbot-nginx</span>
+              <span className="text-gray-400 text-xs">## Install Certbot for Nginx</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com</span>
+              <span className="text-gray-400 text-xs">## Get SSL certificate</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo certbot renew --dry-run</span>
+              <span className="text-gray-400 text-xs">## Test certificate renewal</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo certbot renew</span>
+              <span className="text-gray-400 text-xs">## Renew SSL certificate</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300"># SSL configuration auto-added by Certbot</span>
+            </div>
+            <div className="text-gray-300 ml-4">listen 443 ssl;</div>
+            <div className="text-gray-300 ml-4">ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;</div>
+            <div className="text-gray-300 ml-4">ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;</div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># Log Files</div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo tail -f /var/log/nginx/access.log</span>
+              <span className="text-gray-400 text-xs">## View access logs in real-time</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo tail -f /var/log/nginx/error.log</span>
+              <span className="text-gray-400 text-xs">## View error logs in real-time</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo cat /var/log/nginx/error.log</span>
+              <span className="text-gray-400 text-xs">## View error log</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo tail -n 100 /var/log/nginx/access.log</span>
+              <span className="text-gray-400 text-xs">## View last 100 access log entries</span>
+            </div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
+            <div className="text-green-400"># Common Configuration Tasks</div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo nginx -t</span>
+              <span className="text-gray-400 text-xs">## Test configuration before reloading</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo systemctl reload nginx</span>
+              <span className="text-gray-400 text-xs">## Reload configuration (no downtime)</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo nginx -s reload</span>
+              <span className="text-gray-400 text-xs">## Alternative reload command</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo chown -R www-data:www-data /var/www/your-site</span>
+              <span className="text-gray-400 text-xs">## Set correct permissions</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo chmod -R 755 /var/www/your-site</span>
+              <span className="text-gray-400 text-xs">## Set directory permissions</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo ufw allow 'Nginx Full'</span>
+              <span className="text-gray-400 text-xs">## Allow Nginx through firewall (Ubuntu)</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo ufw allow 'Nginx HTTP'</span>
+              <span className="text-gray-400 text-xs">## Allow HTTP only</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-gray-300">sudo ufw allow 'Nginx HTTPS'</span>
+              <span className="text-gray-400 text-xs">## Allow HTTPS only</span>
+            </div>
+          </div>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 text-green-400">
+            <div>{'>'} Nginx installed successfully ✓</div>
+            <div>{'>'} Configuration files set up ✓</div>
+            <div>{'>'} Service running and enabled ✓</div>
+            <div>{'>'} Ready to serve web applications! 🌐</div>
+          </div>
+        </div>
+      )
     }
   ];
 
