@@ -172,124 +172,124 @@ export default function Home() {
           <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
             <div className="text-green-400"># Docker Container Management Commands</div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">1 docker ps</span>
-              <span className="text-gray-400 text-xs"># List running containers</span>
+              <span className="text-gray-300">docker ps</span>
+              <span className="text-gray-400 text-xs">## List running containers</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">2 docker ps -a</span>
-              <span className="text-gray-400 text-xs"># List all containers, including stopped ones</span>
+              <span className="text-gray-300">docker ps -a</span>
+              <span className="text-gray-400 text-xs">## List all containers, including stopped ones</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">3 docker run &lt;image&gt;</span>
-              <span className="text-gray-400 text-xs"># Start a new container from an image</span>
+              <span className="text-gray-300">docker run &lt;image&gt;</span>
+              <span className="text-gray-400 text-xs">## Start a new container from an image</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">4 docker run -d &lt;image&gt;</span>
-              <span className="text-gray-400 text-xs"># Start a new container in detached mode</span>
+              <span className="text-gray-300">docker run -d &lt;image&gt;</span>
+              <span className="text-gray-400 text-xs">## Start a new container in detached mode</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">5 docker run -it &lt;image&gt; /bin/bash</span>
-              <span className="text-gray-400 text-xs"># Start a new container with an interactive terminal</span>
+              <span className="text-gray-300">docker run -it &lt;image&gt; /bin/bash</span>
+              <span className="text-gray-400 text-xs">## Start a new container with an interactive terminal</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">6 docker exec -it &lt;container&gt; /bin/bash</span>
-              <span className="text-gray-400 text-xs"># Run a command in a running container</span>
+              <span className="text-gray-300">docker exec -it &lt;container&gt; /bin/bash</span>
+              <span className="text-gray-400 text-xs">## Run a command in a running container</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">7 docker stop &lt;container&gt;</span>
-              <span className="text-gray-400 text-xs"># Stop a running container</span>
+              <span className="text-gray-300">docker stop &lt;container&gt;</span>
+              <span className="text-gray-400 text-xs">## Stop a running container</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">8 docker start &lt;container&gt;</span>
-              <span className="text-gray-400 text-xs"># Start a stopped container</span>
+              <span className="text-gray-300">docker start &lt;container&gt;</span>
+              <span className="text-gray-400 text-xs">## Start a stopped container</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">9 docker restart &lt;container&gt;</span>
-              <span className="text-gray-400 text-xs"># Restart a container</span>
+              <span className="text-gray-300">docker restart &lt;container&gt;</span>
+              <span className="text-gray-400 text-xs">## Restart a container</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">10 docker rm &lt;container&gt;</span>
-              <span className="text-gray-400 text-xs"># Remove a container</span>
+              <span className="text-gray-300">docker rm &lt;container&gt;</span>
+              <span className="text-gray-400 text-xs">## Remove a container</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">11 docker logs &lt;container&gt;</span>
-              <span className="text-gray-400 text-xs"># View the logs of a container</span>
+              <span className="text-gray-300">docker logs &lt;container&gt;</span>
+              <span className="text-gray-400 text-xs">## View the logs of a container</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">12 docker inspect &lt;container&gt;</span>
-              <span className="text-gray-400 text-xs"># Displays detailed information about a container</span>
+              <span className="text-gray-300">docker inspect &lt;container&gt;</span>
+              <span className="text-gray-400 text-xs">## Displays detailed information about a container</span>
             </div>
           </div>
           
           <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
             <div className="text-green-400"># Docker Image Management Commands</div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">1 docker images</span>
-              <span className="text-gray-400 text-xs"># List all Docker images</span>
+              <span className="text-gray-300">docker images</span>
+              <span className="text-gray-400 text-xs">## List all Docker images</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">2 docker pull &lt;image&gt;</span>
-              <span className="text-gray-400 text-xs"># Download an image from Docker Hub</span>
+              <span className="text-gray-300">docker pull &lt;image&gt;</span>
+              <span className="text-gray-400 text-xs">## Download an image from Docker Hub</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">3 docker build -t &lt;name&gt; .</span>
-              <span className="text-gray-400 text-xs"># Build an image from a Dockerfile</span>
+              <span className="text-gray-300">docker build -t &lt;name&gt; .</span>
+              <span className="text-gray-400 text-xs">## Build an image from a Dockerfile</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">4 docker rmi &lt;image&gt;</span>
-              <span className="text-gray-400 text-xs"># Remove an image</span>
+              <span className="text-gray-300">docker rmi &lt;image&gt;</span>
+              <span className="text-gray-400 text-xs">## Remove an image</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">5 docker inspect &lt;image&gt;</span>
-              <span className="text-gray-400 text-xs"># Displays detailed information about an image</span>
+              <span className="text-gray-300">docker inspect &lt;image&gt;</span>
+              <span className="text-gray-400 text-xs">## Displays detailed information about an image</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">6 docker history &lt;image&gt;</span>
-              <span className="text-gray-400 text-xs"># Show the history of an image</span>
+              <span className="text-gray-300">docker history &lt;image&gt;</span>
+              <span className="text-gray-400 text-xs">## Show the history of an image</span>
             </div>
           </div>
           
           <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
             <div className="text-green-400"># Docker Network and Volume Commands</div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">1 docker network ls</span>
-              <span className="text-gray-400 text-xs"># List all networks</span>
+              <span className="text-gray-300">docker network ls</span>
+              <span className="text-gray-400 text-xs">## List all networks</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">2 docker network create &lt;name&gt;</span>
-              <span className="text-gray-400 text-xs"># Create a new network</span>
+              <span className="text-gray-300">docker network create &lt;name&gt;</span>
+              <span className="text-gray-400 text-xs">## Create a new network</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">3 docker volume ls</span>
-              <span className="text-gray-400 text-xs"># List all volumes</span>
+              <span className="text-gray-300">docker volume ls</span>
+              <span className="text-gray-400 text-xs">## List all volumes</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">4 docker volume create &lt;name&gt;</span>
-              <span className="text-gray-400 text-xs"># Create a new volume</span>
+              <span className="text-gray-300">docker volume create &lt;name&gt;</span>
+              <span className="text-gray-400 text-xs">## Create a new volume</span>
             </div>
           </div>
           
           <div className="bg-gray-900 border border-gray-700 rounded p-3 my-3 font-mono text-sm">
             <div className="text-green-400"># Miscellaneous Docker Commands</div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">1 docker info</span>
-              <span className="text-gray-400 text-xs"># Display system wide information</span>
+              <span className="text-gray-300">docker info</span>
+              <span className="text-gray-400 text-xs">## Display system wide information</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">2 docker version</span>
-              <span className="text-gray-400 text-xs"># Show Docker version and info</span>
+              <span className="text-gray-300">docker version</span>
+              <span className="text-gray-400 text-xs">## Show Docker version and info</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">3 docker stats</span>
-              <span className="text-gray-400 text-xs"># Display container resource usage statistics</span>
+              <span className="text-gray-300">docker stats</span>
+              <span className="text-gray-400 text-xs">## Display container resource usage statistics</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">4 docker login</span>
-              <span className="text-gray-400 text-xs"># Log in to Docker Hub</span>
+              <span className="text-gray-300">docker login</span>
+              <span className="text-gray-400 text-xs">## Log in to Docker Hub</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-purple-300">5 docker logout</span>
-              <span className="text-gray-400 text-xs"># Log out from Docker Hub</span>
+              <span className="text-gray-300">docker logout</span>
+              <span className="text-gray-400 text-xs">## Log out from Docker Hub</span>
             </div>
           </div>
           
