@@ -1169,17 +1169,19 @@ export default function Home() {
               : 'bg-gray-200 border border-gray-300'
           }`}
           onClick={toggleTheme}
+          aria-label="Toggle theme"
         >
           {theme === 'dark' ? '☀️' : '🌙'}
         </div>
         
-        <h1 className={`text-2xl font-bold mb-6 text-center font-mono ${
-          theme === 'dark' ? 'text-green-400' : 'text-green-600'
-        }`}>
-          Developer Terminal Commands
-        </h1>
-        
-        <div className="space-y-4">
+        <main>
+          <h1 className={`text-2xl font-bold mb-6 text-center font-mono ${
+            theme === 'dark' ? 'text-green-400' : 'text-green-600'
+          }`}>
+            Developer Terminal Commands
+          </h1>
+          
+          <div className="space-y-4">
           {sections.map((section, index) => (
             <div key={index} className={`border rounded-lg overflow-hidden ${
               theme === 'dark' 
@@ -1225,7 +1227,8 @@ export default function Home() {
               )}
             </div>
           ))}
-        </div>
+          </div>
+        </main>
       </div>
     </div>
   );
