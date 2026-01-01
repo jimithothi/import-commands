@@ -9,6 +9,12 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "browserslist": [
+    "chrome >= 90",
+    "firefox >= 88",
+    "safari >= 14",
+    "edge >= 90"
+  ],
   "dependencies": {
     "next": "^16.0.7",
     "react": "^19.2.0",
