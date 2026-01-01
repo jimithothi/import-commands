@@ -29,7 +29,21 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        source: "/fonts/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
     ];
+  },
+
+  // ✅ Optimize bundle size
+  experimental: {
+    optimizePackageImports: ["next/font"],
   },
 };
 
