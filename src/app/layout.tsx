@@ -6,16 +6,18 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
   display: "swap", // Prevents invisible text during font load
-  preload: true,
+  preload: false, // Defer font loading to reduce critical chain
   adjustFontFallback: true,
+  fallback: ["system-ui", "arial"], // Fast fallback fonts
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap", // Prevents invisible text during font load
-  preload: false, // Only preload the primary font
+  preload: false, // Defer font loading to reduce critical chain
   adjustFontFallback: true,
+  fallback: ["monospace"], // Fast fallback font
 });
 
 export const metadata: Metadata = {
@@ -28,6 +30,11 @@ export const metadata: Metadata = {
     ],
     shortcut: "/favicon.svg",
     apple: "/favicon.svg",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
   },
 };
 
