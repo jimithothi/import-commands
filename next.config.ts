@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
+  poweredByHeader: false,
+  
   // ✅ Compression (gzip / brotli handled by Next or Nginx)
   compress: true,
 
